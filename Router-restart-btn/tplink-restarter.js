@@ -12,17 +12,23 @@
 function createRebootButton() {
     const container = document.querySelector('#pppoe_conn_btn_container > div:nth-child(2)');
     const button_box = container.cloneNode(true);
-    const button = button_box.querySelector('button');
 
-    button.className = "button-button part-seperate gap enabled"
-    button.textContent = "Перезагрузка";
-    button.removeAttribute('disabled');
-    button.id = "reboot_btn";
-    button.style = "margin-left: 10px";
+    const button = button_box.querySelector('button');
+    button.className = "button-button part-seperate gap"
+    button.textContent = "";
+
+    Object.assign(button_box.style, {
+        marginLeft: '10px',
+    });
 
     button.onclick = () => { $("#pppoe_conn_btn").click() };
 
+    const button_text = document.createElement('span');
+    button_text.className = "text button-text";
+    button_text.textContent = "Перезагрузка";
+
     container.appendChild(button_box);
+    button.appendChild(button_text);
 }
 
 (function () {
