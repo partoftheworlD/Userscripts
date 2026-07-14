@@ -5,6 +5,7 @@
 // @description  try to take over the world!
 // @author       partoftheworlD
 // @match        http://192.168.1.1/*.html
+// @match        http://10.0.0.1/*.html
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tp-link.com
 // @grant        none
 // ==/UserScript==
