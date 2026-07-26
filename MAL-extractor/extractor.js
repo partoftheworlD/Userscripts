@@ -126,7 +126,7 @@ function createButton({
 (function() {
     'use strict';
 
-    let data = getData();
+    const data = getData();
 
     createButton({
         text: 'Скопировать ссылки',
